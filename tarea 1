@@ -1,0 +1,54 @@
+import java.util.ArrayList;
+public class j23_TiposDeDatos {
+    static class Jugador {
+        String nombre;
+        int edad;
+        public Jugador(String nombre, int edad) {
+            this.nombre = nombre;
+            this.edad = edad;
+        }
+    }
+    public static void main(String[] args) {
+        System.out.println("-------------");
+        System.out.println(" 1. TIPOS DE DATOS PRIMITIVOS");
+        System.out.println("-------------");
+        byte edadEntrenador = 30;
+        short anioFundacion = 1998;
+        int asistentes = 75000;
+        long idReserva = 1234567890L;
+        float temperaturaSala = 22.5f;
+        double precioEntrada = 45.75;
+        boolean abierto = true;
+        char categoria = 'B';
+        System.out.println("byte (edadEntrenador): " + edadEntrenador);
+        System.out.println("short (anioFundacion): " + anioFundacion);
+        System.out.println("int (asistentes): " + asistentes);
+        System.out.println("long (idReserva): " + idReserva);
+        System.out.println("float (temperaturaSala): " + temperaturaSala);
+        System.out.println("double (precioEntrada): " + precioEntrada);
+        System.out.println("boolean (abierto): " + abierto);
+        System.out.println("char (categoria): " + categoria);
+        System.out.println("-------------");
+        System.out.println(" 2. TIPOS DE DATOS NO PRIMITIVOS (REFERENCIA)");
+        System.out.println("-------------");
+        String nombreGimnasio = "Gimnasio Central";
+        System.out.println("String: " + nombreGimnasio);
+        Integer clasesSemanalesObj = 12;
+        Double pesoObj = 70.5;
+        Boolean activoObj = true;
+        Character inicialObj = 'G';
+        System.out.println("Wrapper Integer: " + clasesSemanalesObj);
+        System.out.println("Wrapper Double: " + pesoObj);
+        int[] diasEntrenamiento = {1, 3, 5, 6};
+        String[] disciplinas = {"Yoga", "Spinning", "Pesas"};
+        System.out.println("Array (Primer dia de entrenamiento): " + diasEntrenamiento[0]);
+        System.out.println("Array (Segunda disciplina): " + disciplinas[1]);
+        Jugador miSocio = new Jugador("Carlos", 28);
+        System.out.println("Objeto Personalizado (Jugador): " + miSocio.nombre + ", " + miSocio.edad + " años.");
+        ArrayList<String> listaEquipo = new ArrayList<>();
+        listaEquipo.add("Mancuernas");
+        listaEquipo.add("Banda elastica");
+        listaEquipo.add("Cuerda");
+        System.out.println("Biblioteca Estándar (ArrayList): " + listaEquipo);
+    }
+}
