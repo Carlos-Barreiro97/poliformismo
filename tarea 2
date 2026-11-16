@@ -1,0 +1,45 @@
+public class j31_Polimorfismo {
+    public static void main(String[] args) {
+        System.out.println("--------------");
+        System.out.println("      POLIMORFISMO      ");
+        System.out.println("--------------\n");
+        Vehiculo miAuto = new Auto();
+        Vehiculo miMoto = new Moto();
+        Vehiculo miCamion = new Camion();
+        Vehiculo[] vehiculos = { miAuto, miMoto, miCamion };
+        for (Vehiculo vehiculo : vehiculos) {
+            vehiculo.arrancar();
+        }
+        System.out.println("\nSin embargo no es indispensable que:" +
+        "\nlas clases hijas sobrescriban los metodos de la clase padre");
+        miAuto.detener();
+        miMoto.detener();
+        miCamion.detener();
+    }
+}
+class Vehiculo {
+    public void arrancar() {
+        System.out.println("El vehiculo arranca de forma generica.");
+    }
+    public void detener() {
+        System.out.println("El vehiculo esta detenido.");
+    }
+}
+class Auto extends Vehiculo {
+    @Override
+    public void arrancar() {
+        System.out.println("Auto: ¡Vroom, vroom!");
+    }
+}
+class Moto extends Vehiculo {
+    @Override
+    public void arrancar() {
+        System.out.println("Moto: ¡Brrrum, brrrum!");
+    }
+}
+class Camion extends Vehiculo {
+    @Override
+    public void arrancar() {
+        System.out.println("Camion: ¡Rrrrrr, pum!");
+    }
+}
